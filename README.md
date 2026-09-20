@@ -1,46 +1,87 @@
 # 💰 Salary Calculator Web App
 
-A simple, responsive, and user-friendly **Salary Calculator Web App** built with **HTML, CSS, and JavaScript**. This project helps users estimate their salary after considering working days, LOP deductions, ESI, PF, and other applicable deductions.
+A responsive and user-friendly **Salary Calculator Web App** built with **HTML, CSS, and JavaScript**. The application provides separate salary calculation options for employees **with ESI** and employees **without ESI**, including PF-based calculations.
+
+## 📌 Project Overview
+
+The Salary Calculator helps calculate an employee's estimated payable salary based on salary, working days, LOP deductions, ESI, PF, and other applicable deductions.
+
+The application provides two dedicated calculation options:
+
+### 🏥 Employees With ESI
+
+This option is designed for employees whose salary calculation includes **ESI deductions**.
+
+It can include:
+
+* Employee name
+* Total salary
+* Number of working days
+* LOP deduction
+* ESI calculation
+* Calculated payable salary
+
+### 🏦 Employees Without ESI – PF Calculation
+
+This option is designed for employees who are **not covered under ESI** and whose salary calculation includes **PF deductions**.
+
+It can include:
+
+* Employee name
+* Total salary
+* Number of working days
+* LOP deduction
+* PF calculation
+* Other applicable deductions
+* Calculated payable salary
 
 ## 🌐 Live Demo
 
 **GitHub Pages:**
 `https://alwin-codexstar.github.io/salary-calculator/`
 
-## 📌 Project Overview
-
-The Salary Calculator provides an easy way to estimate an employee's payable salary based on the information entered by the user.
-
-The application includes separate calculation options for:
-
-* **With ESI**
-* **Without ESI**
-
-Users can enter salary and attendance-related information and instantly view the calculated result.
-
 ## ✨ Features
 
-* 💵 Total salary input
-* 👤 Employee name field
-* 📅 Working days calculation
+* 👤 Employee details
+* 💰 Total salary calculation
+* 📅 Working days input
 * ➖ LOP deduction
-* 🏥 ESI calculation
-* 🏦 PF and other deductions
-* 🔄 With ESI / Without ESI options
+* 🏥 ESI calculation for applicable employees
+* 🏦 PF calculation for employees without ESI
+* 🔄 Separate **With ESI** and **Without ESI – PF Calculation** options
 * 🧮 Automatic salary calculation
-* ⚡ Instant results using JavaScript
+* ⚡ Instant calculation using JavaScript
 * 📱 Responsive design
-* 💻 Works on desktop, tablet, and mobile
-* 🎨 Simple and clean user interface
+* 💻 Desktop, tablet, and mobile support
+* 🎨 Clean and simple user interface
+
+## 🧮 Salary Calculation
+
+The application calculates the estimated payable salary based on the selected employee category and applicable deductions.
+
+### Employees With ESI
+
+```text
+Payable Salary =
+Salary - LOP Deduction - ESI - Other Applicable Deductions
+```
+
+### Employees Without ESI
+
+```text
+Payable Salary =
+Salary - LOP Deduction - PF - Other Applicable Deductions
+```
+
+> **Note:** The exact calculation depends on the formulas and percentages configured in the application.
 
 ## 🛠️ Technologies Used
 
-| Technology   | Purpose                        |
-| ------------ | ------------------------------ |
-| HTML5        | Page structure                 |
-| CSS3         | Styling and responsive design  |
-| JavaScript   | Calculations and functionality |
-| GitHub Pages | Website deployment             |
+| Technology | Purpose                               |
+| ---------- | ------------------------------------- |
+| HTML5      | Web page structure                    |
+| CSS3       | Styling and responsive design         |
+| JavaScript | Salary calculations and functionality |
 
 ## 📂 Project Structure
 
@@ -57,83 +98,70 @@ salary-calculator-web-app/
 ## ⚙️ How to Use
 
 1. Open the Salary Calculator.
-2. Enter the employee name.
+2. Enter the employee details.
 3. Enter the total salary.
-4. Enter the required working-day details.
+4. Enter the number of working days.
 5. Enter LOP deduction if applicable.
-6. Select **With ESI** or **Without ESI**.
-7. Enter the applicable deduction details.
+6. Select the appropriate employee category:
+
+   * **With ESI**
+   * **Without ESI – PF Calculation**
+7. Enter the required deduction details.
 8. Click the calculate button.
-9. View the estimated salary instantly.
+9. View the estimated payable salary.
 
-## 🧮 Salary Calculation
+## 🏥 ESI Employee Calculation
 
-The application uses JavaScript to process the entered salary and deduction details.
+For employees covered under the ESI option, the application calculates the applicable ESI deduction based on the configured percentage.
 
-The basic calculation concept is:
+The project supports an **ESI employee contribution of 0.75%**, where applicable.
 
-```text
-Payable Salary = Salary - LOP Deduction - Applicable Deductions
-```
+## 🏦 PF Employee Calculation
 
-The actual calculation may vary depending on the options selected in the application.
+For employees without ESI, the application provides a **PF-based salary calculation**.
 
-## 🏥 ESI
+The PF calculation can be configured according to the salary structure and percentage used by the application.
 
-The application provides an ESI calculation option based on the percentage configured in the project.
-
-> **Note:** The calculator is intended for educational, demonstration, and estimation purposes. Actual payroll calculations may depend on applicable laws, company policies, salary structure, eligibility, and other factors.
+> **Important:** Actual ESI and PF deductions can depend on applicable statutory rules, eligibility, wage components, company policies, and other payroll conditions. This project is intended for estimation and demonstration purposes.
 
 ## 📱 Responsive Design
 
-The application is designed to work across:
+The application is designed for:
 
 * 🖥️ Desktop
 * 💻 Laptop
 * 📱 Mobile
 * 📲 Tablet
 
-## 🚀 Deployment
-
-This project can be deployed using **GitHub Pages**.
-
-### GitHub Pages Configuration
-
-```text
-Source: Deploy from a branch
-Branch: main
-Folder: / (root)
-```
-
 ## 🔮 Future Enhancements
-
-Planned improvements may include:
 
 * Employee database
 * PHP backend
 * MySQL integration
-* Employee login
+* Employee login and authentication
 * Admin dashboard
-* Monthly salary history
+* Employee salary history
+* Monthly payroll management
 * Payslip generation
 * PDF download
 * Excel export
-* Advanced payroll management
-* Salary reports and analytics
+* Salary reports
+* Payroll analytics
 * Cloud deployment
 
 ## 🎯 Project Purpose
 
-This project was created to demonstrate practical skills in:
+This project demonstrates practical skills in:
 
 * Front-end web development
-* HTML and CSS
-* JavaScript programming
+* HTML5
+* CSS3
+* JavaScript
 * Form handling
-* Mathematical calculations
+* Salary calculations
+* Payroll calculation logic
 * Responsive web design
 * Git and GitHub
-* GitHub Pages deployment
 
 ## 📄 License
 
