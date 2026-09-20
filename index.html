@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salary Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<header class="header">
+<h1>Salary Calculator</h1>
+<p>Calculate employee salary with or without ESI</p>
+</header>
+
+<section class="selection-box">
+<h2>Select Salary Type</h2>
+<div class="salary-options">
+<label class="option active" id="esiOption">
+<input type="radio" name="salaryType" value="esi" checked>
+<h3>Salary With ESI</h3>
+<p>Calculate salary including ESI deduction at 0.75%</p>
+</label>
+<label class="option" id="noEsiOption">
+<input type="radio" name="salaryType" value="noesi">
+<h3>Salary Without ESI</h3>
+<p>Calculate salary with PF and other deductions</p>
+</label>
+</div>
+</section>
+
+<section class="calculator show" id="esiCalculator">
+<div class="calculator-title"><h2>Salary Calculator - With ESI</h2><p>Employee salary calculation with ESI deduction</p></div>
+<div class="form-grid">
+<div class="form-group full"><label>Employee Name</label><input id="esiName" type="text" placeholder="Enter employee name"></div>
+<div class="form-group"><label>Total Salary (₹)</label><input id="esiSalary" type="number" min="0" placeholder="Enter total salary"></div>
+<div class="form-group"><label>No. of Working Days</label><input id="esiWorkingDays" type="number" min="1" max="31" placeholder="Example: 26"></div>
+<div class="form-group"><label>LOP Deduction (Days)</label><input id="esiLop" type="number" min="0" placeholder="Enter LOP days"></div>
+<div class="form-group"><label>ESI (0.75%)</label><input id="esiAmount" type="number" value="0" readonly><div class="deduction-info">Employee ESI contribution: <strong>0.75%</strong></div></div>
+<div class="form-group full"><label>Calculated Salary (₹)</label><input id="esiCalculatedSalary" type="number" value="0" readonly></div>
+</div>
+<div class="button-area"><button class="calculate-btn" id="calculateEsiBtn">Calculate Salary</button><button class="reset-btn" id="resetEsiBtn">Reset</button></div>
+<div class="result-box" id="esiResult"><h3>Salary Summary</h3>
+<div class="result-row"><span>Employee</span><strong id="resultEsiName">-</strong></div>
+<div class="result-row"><span>Gross Salary</span><strong id="resultEsiGross">₹0.00</strong></div>
+<div class="result-row"><span>LOP Deduction</span><strong id="resultEsiLop">₹0.00</strong></div>
+<div class="result-row"><span>ESI (0.75%)</span><strong id="resultEsiAmount">₹0.00</strong></div>
+<div class="result-row total"><span>Net Salary</span><strong id="resultEsiNet">₹0.00</strong></div>
+</div>
+</section>
+
+<section class="calculator" id="noEsiCalculator">
+<div class="calculator-title"><h2>Salary Calculator - Without ESI</h2><p>Employee salary calculation with PF and other deductions</p></div>
+<div class="form-grid">
+<div class="form-group full"><label>Employee Name</label><input id="noEsiName" type="text" placeholder="Enter employee name"></div>
+<div class="form-group"><label>Total Salary (₹)</label><input id="noEsiSalary" type="number" min="0" placeholder="Enter total salary"></div>
+<div class="form-group"><label>No. of Working Days</label><input id="noEsiWorkingDays" type="number" min="1" max="31" placeholder="Example: 26"></div>
+<div class="form-group"><label>LOP Deduction (Days)</label><input id="noEsiLop" type="number" min="0" placeholder="Enter LOP days"></div>
+<div class="form-group"><label>PF Deduction</label><select id="pfPercentage"><option value="0">No PF</option><option value="12">PF - 12%</option><option value="10">PF - 10%</option><option value="8">PF - 8%</option></select></div>
+<div class="form-group"><label>PF Amount (₹)</label><input id="pfAmount" type="number" value="0" readonly></div>
+<div class="form-group"><label>Other Deduction (₹)</label><input id="otherDeduction" type="number" min="0" value="0" placeholder="Enter other deduction"></div>
+<div class="form-group full"><label>Calculated Salary (₹)</label><input id="noEsiCalculatedSalary" type="number" value="0" readonly></div>
+</div>
+<div class="button-area"><button class="calculate-btn" id="calculateNoEsiBtn">Calculate Salary</button><button class="reset-btn" id="resetNoEsiBtn">Reset</button></div>
+<div class="result-box" id="noEsiResult"><h3>Salary Summary</h3>
+<div class="result-row"><span>Employee</span><strong id="resultNoEsiName">-</strong></div>
+<div class="result-row"><span>Gross Salary</span><strong id="resultNoEsiGross">₹0.00</strong></div>
+<div class="result-row"><span>LOP Deduction</span><strong id="resultNoEsiLop">₹0.00</strong></div>
+<div class="result-row"><span>PF Deduction</span><strong id="resultPfAmount">₹0.00</strong></div>
+<div class="result-row"><span>Other Deduction</span><strong id="resultOtherDeduction">₹0.00</strong></div>
+<div class="result-row total"><span>Net Salary</span><strong id="resultNoEsiNet">₹0.00</strong></div>
+</div>
+</section>
+
+<footer class="footer">Alwin CodexStar © 2026</footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
